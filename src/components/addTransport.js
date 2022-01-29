@@ -235,12 +235,13 @@ export default class addTransport extends Component {
     await axios
       .get(`http://localhost:3000/users/transportdetails`)
       .then((res) => {
-        if (res.data !== '' || res.data[0].length > 0) {
-          document.getElementById('nicnumber').value = res.data[0].nicno;
-          document.getElementById('phone').value = res.data[0].phone;
-          document.getElementById('location').value = res.data[0].city;
-          document.getElementById('uaddress').value = res.data[0].address;
-          document.getElementById('email').value = res.data[0].email;
+        if (res.data.length > 0) {
+          console.log('res', res)
+          document.getElementById('nicnumber').value = res.data[0]?.nicno;
+          document.getElementById('phone').value = res.data[0]?.phone;
+          document.getElementById('location').value = res.data[0]?.city;
+          document.getElementById('uaddress').value = res.data[0]?.address;
+          document.getElementById('email').value = res.data[0]?.email;
           document.getElementById('nicnumber').disabled = true;
           document.getElementById('phone').disabled = true;
           document.getElementById('location').disabled = true;
@@ -254,7 +255,7 @@ export default class addTransport extends Component {
             'cancelbtn'
           ).onclick = this.onDeleteUserDetails;
           this.setState({
-            approved: res.data[0].approved,
+            approved: res.data[0]?.approved,
             vehicleallow: true,
           });
           if (!this.state.approved) {

@@ -132,7 +132,7 @@ class AdminProfile extends React.Component {
             <Menu.Item key="1" icon={<HomeOutlined />}>
               Home
             </Menu.Item>
-            <SubMenu key="sub1" icon={<EditOutlined />} title="Edit">
+            {/* <SubMenu key="sub1" icon={<EditOutlined />} title="Edit">
               <SubMenu
                 key="sub1-2"
                 icon={<CameraOutlined />}
@@ -160,21 +160,21 @@ class AdminProfile extends React.Component {
                   Remove
                 </Menu.Item>
               </SubMenu>
-            </SubMenu>
+            </SubMenu> */}
             <SubMenu key="sub2" icon={<CheckCircleOutlined />} title="View">
-              <Menu.Item key="5" onClick={viewTrips} icon={<BarChartOutlined />}>
+              {/* <Menu.Item key="5" onClick={viewTrips} icon={<BarChartOutlined />}>
                 Tours
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item key="7" onClick={viewUsers} icon={<UserOutlined />}>
                 Users 
               </Menu.Item>
-              <Menu.Item
+              {/* <Menu.Item
                 key="15"
                 onClick={viewApprovedGuides}
                 icon={<UserOutlined />}
               >
                 Approved Guides
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item
                 key="11"
                 icon={<MailOutlined />}
@@ -183,7 +183,7 @@ class AdminProfile extends React.Component {
                 Responses
               </Menu.Item>
             </SubMenu>
-            <SubMenu key="sub3" icon={<ContactsOutlined />} title="Approve">
+            {/* <SubMenu key="sub3" icon={<ContactsOutlined />} title="Approve">
               <Menu.Item
                 key="13"
                 onClick={viewGuideRequests}
@@ -198,7 +198,7 @@ class AdminProfile extends React.Component {
               >
                 Transport
               </Menu.Item>
-            </SubMenu>
+            </SubMenu> */}
             <Menu.Item key="2" icon={<SettingFilled />}>
               Manage Account
             </Menu.Item>

@@ -37,7 +37,7 @@ export default class headers extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" id="navitems">
             <Link id="links" to="/">Home</Link>
-            <Link id="links" to="/destinations">Destinations</Link>
+            {/* <Link id="links" to="/destinations">Destinations</Link> */}
             <Link id="links" to="/contact">Contact Us</Link>
             <Link id="links" to="/about">Services</Link>
             <Link id="links" to="/findweather">Weather</Link>

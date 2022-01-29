@@ -186,7 +186,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-    return ['Where are you going?', 'Route View', 'Select Point of Interest', 'Select Hotels', 'Select Vehicles', 'Sheduled Trip'];
+    return ['Where are you going?', 'Route View', 'Select Point of Interest', 'Select Hotels', 'Sheduled Trip'];
 }
 
 function getStepContent(step) {
@@ -204,9 +204,9 @@ function getStepContent(step) {
         case 3:
            // return <h1>fourth Step working</h1>
          return <Manualselecthotels />;
+        // case 4:
+        //     return <Manualselectvehicles />
         case 4:
-            return <Manualselectvehicles />
-        case 5:
             return <Tourgenerator Inputdetails={Inputdetails} />
         default:
             return <Inputtourdetails />;
@@ -382,7 +382,7 @@ class Inputtourdetails extends Component {
                                             <div className="col-sm-6">
                                                 <div className="form-group">
                                                     <span className="form-label">Start date</span>
-                                                    <input className="form-control" type="date" id="startdate" min="2020-12-22" max="2020-12-28" style={{ marginLeft: '-3%', fontSize: '12px', width: '140px' }} onChange={this.startdateChange} value={this.state.startdate} required />
+                                                    <input className="form-control" type="date" id="startdate" style={{ marginLeft: '-3%', fontSize: '12px', width: '140px' }} onChange={this.startdateChange} value={this.state.startdate} required />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">

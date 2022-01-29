@@ -170,20 +170,20 @@ class UserView extends React.Component {
             >
               Check Hotels
             </Menu.Item>
-            <Menu.Item
+            {/* <Menu.Item
               key="5"
               onClick={guideCheck}
               icon={<CompassOutlined style={{ verticalAlign: '-2%' }} />}
             >
               Find Guide
-            </Menu.Item>
-            <Menu.Item
+            </Menu.Item> */}
+            {/* <Menu.Item
               key="19"
               onClick={searchTransport}
               icon={<CarOutlined style={{ verticalAlign: '-2%' }} />}
             >
               Search Transport
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
               key="6"
               onClick={routeCheck}
@@ -218,34 +218,6 @@ class UserView extends React.Component {
                 Become Guide
               </Menu.Item>
             </SubMenu> */}
-            <SubMenu
-              SubMenu
-              key="22"
-              icon={<SnippetsOutlined style={{ verticalAlign: '-2%' }} />}
-              title="View"
-            >
-              <Menu.Item
-                key="10"
-                onClick={myTours}
-                icon={<CalendarOutlined style={{ verticalAlign: '-2%' }} />}
-              >
-                My Tours
-              </Menu.Item>
-              <Menu.Item
-                key="29"
-                onClick={recommendedTours}
-                icon={<CalendarOutlined style={{ verticalAlign: '-2%' }} />}
-              >
-                Recommended Tours
-              </Menu.Item>
-              {/* <Menu.Item
-                key="21"
-                icon={<CarOutlined style={{ verticalAlign: '-2%' }} />}
-                onClick={viewVehicles}
-              >
-                My Vehicles
-              </Menu.Item> */}
-            </SubMenu>
             <SubMenu
               key="7"
               icon={<SettingFilled style={{ verticalAlign: '-2%' }} />}

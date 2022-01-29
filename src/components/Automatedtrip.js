@@ -411,7 +411,7 @@ class Inputtourdetails extends Component {
                                             <div className="col-sm-6">
                                                 <div className="form-group">
                                                     <span className="form-label">Start date</span>
-                                                    <input className="form-control" type="date" id="startdate" min="2020-12-22" max="2020-12-27" style={{ marginLeft: '-3%', fontSize: '12px', width: '140px' }} onChange={this.startdateChange} value={this.state.startdate} required />
+                                                    <input className="form-control" type="date" id="startdate" style={{ marginLeft: '-3%', fontSize: '12px', width: '140px' }} onChange={this.startdateChange} value={this.state.startdate} required />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">

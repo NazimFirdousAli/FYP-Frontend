@@ -97,16 +97,16 @@ export default function Plantrip(props) {
                         </Tabs>
                     </AppBar>
                     <TabPanel value={value} index={0}>
-                        <div className="outlineplan" style={{ width: '67%' }}>
-                            <div className="plantripservice" onClick={automatedTripFunction} >
+                        <div className="outlineplan" style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems : 'center', flexDirection:'column' }}>
+                            {/* <div className="plantripservice" onClick={automatedTripFunction} >
                                 <SettingOutlined id="icons" className="icon_automated" style={{ fontSize: '40px', marginTop: '-20px', color: 'white', marginLeft: '43%' }} />
                                 <h2>Automated Tour</h2>
                                 <p>Let our system to design an exciting tour for you.</p>
-                            </div>
+                            </div> */}
                             <span style={{ marginLeft: '50px' }}></span>
                             <div className="plantripservice" onClick={manualTripFunction}>
                                 <EditOutlined id="icons" className="icon_manualtrip" style={{ fontSize: '40px', marginTop: '-20px', color: 'white', marginLeft: '43%' }} />
-                                <h2>Manual Tour</h2>
+                                <h2>Plan Tour</h2>
                                 <p>Design your tour, with your own considerations.</p>
                             </div>
                         </div>

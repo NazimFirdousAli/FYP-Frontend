@@ -735,15 +735,15 @@ export default class Tourgenerator extends Component {
                         </ListItemAvatar>
                         <ListItemText primary="Destination" secondary={this.state.inputDetails.destination} />
                     </ListItem>
-                    <ListItem>
+                    {/* <ListItem>
                         <ListItemAvatar color="secondary">
                             <Avatar>
                                 <DateRangeIcon />
                             </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary="Total Days" secondary={this.state.tripDays + ' Days'} />
-                    </ListItem>
-                    {this.state.tripDays > this.state.totalDays ? 
+                    </ListItem> */}
+                    {/* {this.state.tripDays > this.state.totalDays ? 
                         <ListItem>
                             <ListItemAvatar color="secondary">
                                 <Avatar>
@@ -751,32 +751,32 @@ export default class Tourgenerator extends Component {
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText primary="Extra Days" secondary={this.state.tripDays - this.state.totalDays + ' Days '}/>
-                        </ListItem>  : <></> }
-                    <ListItem>
+                        </ListItem>  : <></> } */}
+                    {/* <ListItem>
                         <ListItemAvatar color="secondary">
                             <Avatar>
                                 <HotelIcon />
                             </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary="Hotel & Accomodation" secondary={this.state.hotelPrice.toLocaleString() + ` PKR (${this.state.tripDays} Days for ${this.state.inputDetails.Adults} people)`} />
-                    </ListItem>
-                    <ListItem>
+                    </ListItem> */}
+                    {/* <ListItem>
                         <ListItemAvatar color="secondary">
                             <Avatar>
                                 <LocalGasStationIcon />
                             </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary="Fuel " secondary={this.state.fuelCost + ' Liters Approx'} />
-                    </ListItem>
-                    {this.state.transportType == 'Rental' ? <ListItem>
+                    </ListItem> */}
+                    {/* {this.state.transportType == 'Rental' ? <ListItem>
                         <ListItemAvatar color="secondary">
                             <Avatar>
                                 <DirectionsCarIcon />
                             </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary="Vehicle cost" secondary={(this.state.vehiclePrice * this.state.tripDays).toLocaleString() + ` PKR (${this.state.tripDays} Days)`} />
-                    </ListItem> : <></>}
-                    {this.state.transportType == 'Bus' ? <ListItem>
+                    </ListItem> : <></>} */}
+                    {/* {this.state.transportType == 'Bus' ? <ListItem>
                         <ListItemAvatar color="secondary">
                             <Avatar>
                                 <DirectionsCarIcon />
@@ -791,7 +791,7 @@ export default class Tourgenerator extends Component {
                             </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary=" Total Budget" secondary={this.state.budget.toLocaleString() + ' PKR'} />
-                    </ListItem>
+                    </ListItem> */}
                 </List>
 
                 {this.state.inputDetails.stayCity == null ? <FirstDayTripCar day={this.state.tourDay - 1} /> : <FirstDayTripCar day={this.state.tourDay - 2} />}
@@ -891,8 +891,9 @@ export default class Tourgenerator extends Component {
                                 <div>Go with this plan or select some more Point of Interest to visit.</div></> : <>{this.state.totalDays > this.state.tripDays ? <><div>You are short of trip Days.</div><div>Go back and select some less POI's or Extend the dates.</div> </> : <>Save it now. </>}</>}
                         </TextLoop>
                     }
-                />   <label id="labels" style={{ position: 'relative', marginTop: '2%', marginLeft: '10%' }}>Tour Categories:</label>
-                    <div style={{ position: 'relative', display: 'flex', marginLeft: '15%' }}>
+                />   
+                {/* <label id="labels" style={{ position: 'relative', marginTop: '2%', marginLeft: '10%' }}>Tour Categories:</label> */}
+                    {/* <div style={{ position: 'relative', display: 'flex', marginLeft: '15%' }}>
                         <div id="box" style={{ display: 'flex', flexDirection: 'column' }}>
                             <label id="labels" >Weather:</label>
                             {Array.isArray(this.state.tagWeatherType) &&
@@ -905,8 +906,8 @@ export default class Tourgenerator extends Component {
                                             <option value={value._id}>{value.name}</option>)
                                     })}
                                 </select>}
-                        </div>
-                        <div id="box" style={{ marginLeft: '20px', display: 'flex', flexDirection: 'column' }}>
+                        </div> */}
+                        {/* <div id="box" style={{ marginLeft: '20px', display: 'flex', flexDirection: 'column' }}>
                             <label id="labels" style={{ float: 'left' }}>Hotels:</label>
                             {Array.isArray(this.state.tagHotelType) &&
                                 <select className="form-control" style={{ fontSize: '12px', width: '90px' }}
@@ -918,9 +919,9 @@ export default class Tourgenerator extends Component {
                                             <option value={value._id}>{value.name}</option>)
                                     })}
                                 </select>}
-                        </div>
+                        </div> */}
                         <br />
-                        <div id="box" style={{ marginLeft: '20px', display: 'flex', flexDirection: 'column' }}>
+                        {/* <div id="box" style={{ marginLeft: '20px', display: 'flex', flexDirection: 'column' }}>
                             <label id="labels">Trip days:</label>
                             {Array.isArray(this.state.tagTripType) &&
                                 <select className="form-control" style={{ fontSize: '12px', width: '100px' }}
@@ -945,9 +946,9 @@ export default class Tourgenerator extends Component {
                                             <option value={value._id}>{value.name}</option>)
                                     })}
                                 </select>}
-                        </div>
-                    </div>
-                    <div style={{ marginLeft: '85%', marginTop: '2%' }}>
+                        </div> */}
+                    {/* </div> */}
+                    {/* <div style={{ marginLeft: '85%', marginTop: '2%' }}>
                         <Button
                             variant="contained"
                             color="primary"
@@ -959,7 +960,7 @@ export default class Tourgenerator extends Component {
                         >
                             Save
       </Button>
-                    </div>
+                    </div> */}
                     {/* <ReactToPrint	
                             trigger={() => {	
                                 // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop	

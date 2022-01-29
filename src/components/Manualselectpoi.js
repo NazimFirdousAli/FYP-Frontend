@@ -241,13 +241,7 @@ export default class Manualselectpois extends Component {
         })
         //https://cors-anywhere.herokuapp.com/
         axios
-            .get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=${this.state.destination}+point+of+interest&language=en&key=AIzaSyADmNrx-v8o-go9raKrbO4An9RaYGfUW9s`,
-            {
-                headers: {
-                  'Access-Control-Allow-Origin' : '*',
-                  'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-                }
-            }
+            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${this.state.destination}+point+of+interest&language=en&key=AIzaSyADmNrx-v8o-go9raKrbO4An9RaYGfUW9s`,
         )
             .then(response =>
                 response.data.results.map(poi => ({
@@ -258,7 +252,8 @@ export default class Manualselectpois extends Component {
                     totalRating: poi.user_ratings_total,
                     photo: poi.photos == undefined ? " " : poi.photos[0].photo_reference,
                     type: "poi",
-                }))
+                })
+                )
             )
             .then(POIS => {
                 this.setState({

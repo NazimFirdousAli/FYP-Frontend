@@ -160,7 +160,7 @@ export default class Manualselecthotels extends Component {
         var ind = 0;
         axios
             .get(
-                'https://travel-advisor.p.rapidapi.com/hotels/list',
+                'https://tripadvisor1.p.rapidapi.com/hotels/list',
 
                 {
                     method: 'GET',
@@ -178,15 +178,12 @@ export default class Manualselecthotels extends Component {
                         lang: 'en_US'
                     },
                     headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                         'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
                         'x-rapidapi-key':
                             '568f3cbe88msh653629716523bc5p1d6c1cjsn9ba8d817af73',
                     },
                 }
-            ).then(response => {
-                console.log("==================", response.data.data)
+            ).then(response => 
                 response.data.data.map((hotel, index) => ({
                     name: hotel.name,
                     address: hotel.location_string,
@@ -197,10 +194,8 @@ export default class Manualselecthotels extends Component {
                     image: hotel.photo,
                     type: "hotel",
                 }),
-                    // console.log(JSON.stringify(response.data))
                 )
-
-            }).then(Hotels => {
+        ).then(Hotels => {
                 console.log('Hotwl 11 ', Hotels);
                 this.setState({
                    Hotels : Hotels,
@@ -216,6 +211,8 @@ export default class Manualselecthotels extends Component {
 
                 console.log("data: Hotels" + JSON.stringify(this.state.Hotels));
                 console.log("Length: Hotels" + this.state.Hotels.length);
+            }).catch(error => {
+                console.log('error is ', error)
             })
     }
 
