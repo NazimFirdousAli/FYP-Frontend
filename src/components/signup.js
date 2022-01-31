@@ -132,7 +132,7 @@ class signup extends Component {
           phone: this.state.phone,
           password: this.state.password,
           accounttype: this.state.title,
-          admin : true,
+          admin : false,
 
         })
         .then((res) => {

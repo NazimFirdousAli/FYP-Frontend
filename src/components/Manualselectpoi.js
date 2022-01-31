@@ -241,7 +241,7 @@ export default class Manualselectpois extends Component {
         })
         //https://cors-anywhere.herokuapp.com/
         axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${this.state.destination}+point+of+interest&language=en&key=AIzaSyADmNrx-v8o-go9raKrbO4An9RaYGfUW9s`,
+            .get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=${this.state.destination}+point+of+interest&language=en&key=AIzaSyADmNrx-v8o-go9raKrbO4An9RaYGfUW9s`,
         )
             .then(response =>
                 response.data.results.map(poi => ({

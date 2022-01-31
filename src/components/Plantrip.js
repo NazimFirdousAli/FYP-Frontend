@@ -83,20 +83,7 @@ export default function Plantrip(props) {
             <h3>Plan Your Tour</h3>
             <div id="content">
                 <div className={classes.root}>
-                    <AppBar position="static">
-                        <Tabs
-                            value={value}
-                            onChange={handleChange}
-                            variant="scrollable"
-                            scrollButtons="off"
-                            aria-label="scrollable prevent tabs example"
-                        >
-                            <Tab icon={<FlightTakeoffIcon />} aria-label="phone" {...a11yProps(0)} />
-                            <Tab icon={<FavoriteIcon />} aria-label="favorite" {...a11yProps(1)} />
-                            <Tab icon={<PersonPinIcon />} aria-label="person" {...a11yProps(2)} />
-                        </Tabs>
-                    </AppBar>
-                    <TabPanel value={value} index={0}>
+                    
                         <div className="outlineplan" style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems : 'center', flexDirection:'column' }}>
                             {/* <div className="plantripservice" onClick={automatedTripFunction} >
                                 <SettingOutlined id="icons" className="icon_automated" style={{ fontSize: '40px', marginTop: '-20px', color: 'white', marginLeft: '43%' }} />
@@ -110,13 +97,7 @@ export default function Plantrip(props) {
                                 <p>Design your tour, with your own considerations.</p>
                             </div>
                         </div>
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
-                        Item Two
-      </TabPanel>
-                    <TabPanel value={value} index={2}>
-                        Item Three
-      </TabPanel>
+                                    
                 </div>
             </div>
         </div>
